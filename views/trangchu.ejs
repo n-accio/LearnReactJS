@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Demo Reacjs</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
   </head>
   <body>
-    Hello
+    <div id="root"></div>
+    <script type="text/babel">
+    ReactDOM.render( <h1>HOC ReactJS</h1> , document.getElementById("root"));
+    </script>
   </body>
 </html>
