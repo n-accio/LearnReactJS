@@ -4,3 +4,4 @@ ReactDOM.render(
       <h1>HOC ReactJS</h1>     
     </div> 
   , document.getElementById("root"));
+  
