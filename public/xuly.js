@@ -1,8 +1,10 @@
+class KhoaPham extends React.Component{
+  render() {
+    return <h1 className="violet"> Khoa Pham React</h1>
+  }
+};
+
 ReactDOM.render( 
-    <div>
-      <h1 className="violet">HOC ReactJS</h1>
-      <h1>HOC ReactJS</h1>     
-    </div> 
+    <KhoaPham /> 
   , document.getElementById("root")
 );
-
