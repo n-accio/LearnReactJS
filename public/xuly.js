@@ -3,6 +3,7 @@ class KhoaPham extends React.Component{
     return (
       <div>
         <h1 className="violet"> {this.props.subject} - {this.props.lecturers}</h1>
+        <p> {this.props.children} </p>
         <KhoaHoc />
       </div>
     )
@@ -17,8 +18,8 @@ class KhoaHoc extends React.Component{
 
 ReactDOM.render( 
   <div>
-    <KhoaPham subject = "ReactJs" lecturers = "Mr Khoa Pham"/>
-    <KhoaPham subject = "Node Js" lecturers = "Mr Thinh"/> 
+    <KhoaPham subject="ReactJs" lecturers="Mr Khoa Pham"> Mon hoc React</KhoaPham>
+      <KhoaPham subject="Node Js" lecturers="Mr Thinh">Mon hoc Node</KhoaPham> 
   </div>
   , document.getElementById("root")
 );
