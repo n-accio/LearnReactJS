@@ -1,3 +1,7 @@
+function getName(name){
+  alert(name);
+}
+
 class KhoaPham extends React.Component{
   constructor(props) {
     super(props);
@@ -13,7 +17,7 @@ class KhoaPham extends React.Component{
         <h1 className="violet"> {this.props.subject} - {this.props.lecturers}</h1>
         <p> {this.props.children} </p>
         <button onClick={
-          this.layThongTin
+          () =>{var str= this.props.lecturers + " "+ this.props.subject; getName(str)}
         }>Thong tin</button>
         <h3>Lap Trinh ReatJs</h3>
       </div>
