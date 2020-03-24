@@ -1,18 +1,23 @@
 class KhoaPham extends React.Component{
+  constructor(props) {
+    super(props);
+    this.layThongTin = this.layThongTin.bind(this);
+  }
+  layThongTin() {
+    alert(this.props.children);
+  }
+
   render() {
     return (
       <div>
         <h1 className="violet"> {this.props.subject} - {this.props.lecturers}</h1>
         <p> {this.props.children} </p>
-        <KhoaHoc />
+        <button onClick={
+          this.layThongTin
+        }>Thong tin</button>
+        <h3>Lap Trinh ReatJs</h3>
       </div>
     )
-  }
-};
-
-class KhoaHoc extends React.Component{
-  render() {
-    return <h3>Hoc Lap Trinh ReactJs</h3>
   }
 };
 
