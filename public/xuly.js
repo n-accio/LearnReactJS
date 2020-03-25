@@ -4,14 +4,16 @@ function getName(name){
 
 class KhoaPham extends React.Component{
 
-  addStudent(){
-    this.setState({tongHocVien: this.state.tongHocVien + 1});
-  }
   constructor(props) {
     super(props);
     this.layThongTin = this.layThongTin.bind(this);
-    this.state = {tongHocVien: 0};
+    this.state = {tongHocVien: this.props.tongHocVien};
     this.addStudent= this.addStudent.bind(this);
+  }
+  addStudent(){
+    this.setState({tongHocVien: parseInt(this.state.tongHocVien) + 1});
+    // this.state.tongHocVien = parseInt(this.state.tongHocVien)+1;
+    // this.setState(this.state);
   }
   layThongTin() {
     alert(this.props.children);
@@ -35,8 +37,8 @@ class KhoaPham extends React.Component{
 
 ReactDOM.render( 
   <div>
-    <KhoaPham subject="ReactJs" lecturers="Mr Khoa Pham"> Mon hoc React</KhoaPham>
-      <KhoaPham subject="Node Js" lecturers="Mr Thinh">Mon hoc Node</KhoaPham> 
+    <KhoaPham subject="ReactJs" lecturers="Mr Khoa Pham" tongHocVien="10"> Mon hoc React</KhoaPham>
+      <KhoaPham subject="Node Js" lecturers="Mr Thinh" tongHocVien="20">Mon hoc Node</KhoaPham> 
   </div>
   , document.getElementById("root")
 );
