@@ -6,5 +6,5 @@ app.set("views","./views");
 app.listen(3000);
 
 app.get("/",function(req,res){
-  res.render("trangchu");
+  res.render("homepage");
 })
